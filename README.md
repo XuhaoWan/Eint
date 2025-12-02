@@ -1,3 +1,3 @@
-# Transfer learning guided discovery of new-generation of eco-friendly insulation medium for power equipment
+# Physics-informed Pre-trained Graph Learning for Quantum Mechanics Interaction Energies Predictions of Ligand Screening
 
-Core Developer: Xuhao Wan (xhwanrm@whu.edu.cn), Prof. Yuzheng Guo (yguo@whu.edu.cn)
+Core Developer: Xuhao Wan (xhwanrm@whu.edu.cn), Dr. Wei Yu (yuwei2@whu.edu.cn)
