@@ -22,3 +22,34 @@ This repo provides a simple workflow to:
 PubChemQC PM6 is very large (full set is **> 20TB**).
 ```bash
 https://nakatamaho.riken.jp/pubchemqc.riken.jp/pm6_datasets.html
+
+## 2) **Preprocess PubChemQC PM6 into this repo’s training format**
+Then use the todata.py to preprocess the original dataset.
+
+## 3) **Pretraining**
+Create test.yaml (/pretrain.yaml) using the determined architecture.
+Use your existing pretrain script (the one that builds model = GTCN(config) and calls trainer.fit(...)).
+```bash
+python train.py --gpu 8 --seed 0 --fold 0
+After training, keep the best checkpoint produced by ModelCheckpoint(monitor="valid_mae").
+You will use it as --ckpt for fine-tuning.
+
+## 4) **Fine-tuning**
+Fine-tune YAML /train_ft.yaml (must match the pretrained encoder)
+Important: these must match pretraining exactly, otherwise the checkpoint won’t load: max_fea_val, nd_fea, heads, hnrons, layers, E_node, E_edge, act, beta
+Use the fine-tune training script:
+```bash
+python train_ft.py \
+  --gpu 8 \
+  --seed 0 \
+  --ckpt /path/to/pretrained.ckpt \
+  --yaml train_ft.yaml
+
+## 5) **Inference (fine-tuned checkpoint)**
+Run prediction using the fine-tuned checkpoint:
+```bash
+python finetune_predict.py \
+  --gpu 8 \
+  --seed 0 \
+  --ckpt /path/to/finetuned.ckpt 
+
