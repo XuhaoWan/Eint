@@ -1,0 +1,53 @@
+model_name:
+  note: The structure number and target of the model
+  value: GTCN_finetune
+max_fea_val:
+  note: The max valude of all node features
+  value: 36
+nd_fea:
+  note: The number of node features
+  value: 10
+heads:
+  note: Number of transformer heads
+  value: 64
+hnrons:
+  note: Number of hidden neurons of layers
+  value: 1024
+layers:
+  note: The depth of the model
+  value: 15
+E_node:
+  note: Embedding dims of node features
+  value: 16
+E_edge:
+  note: Dims of input edge features
+  value: 6
+act:
+  note: Activation function
+  value: ReLU
+beta:
+  note: beta value in GTCN block
+  value: False
+
+epochs:
+  note: Fine-tune epochs (usually fewer than pretrain)
+  value: 50
+batch_size:
+  note: Mini-batch size for fine-tuning
+  value: 8
+lr:
+  note: Fine-tune LR (smaller)
+  value: 0.00005
+wd:
+  note: Weight decay (can be smaller)
+  value: 0.000001
+gradient_clip_val:
+  note: Gradient clip value
+  value: 0
+
+dropout:
+  note: Keep encoder dropout same as pretrain unless you retrain encoder
+  value: 0
+
+
+

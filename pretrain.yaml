@@ -1,0 +1,61 @@
+model_name:
+  note: The structurem number and target of the model
+  value: GTCN
+max_fea_val:
+  note: The max valude of all node features
+  value: 36
+nd_fea:
+  note: The number of node features
+  value: 10
+epochs:
+  note: Train epochs
+  value: 200
+batch_size:
+  note: Size of mini-batch in training
+  value: 32
+lr:
+  note: Learning rate
+  value: 0.0001
+wd:
+  note: Weight decay
+  value: 0.000001
+gradient_clip_val:
+  note: Gradient clip value
+  value: 0
+heads:
+  note: Number of transformer heads
+  value: 64
+hnrons:
+  note: Number of hidden neurons of layers
+  value: 1024
+layers:
+  note: The depth of the model
+  value: 15 
+E_node:
+  note: Embedding dims of node features
+  value: 16 
+E_edge:
+  note: Dims of input edge features
+  value: 6
+dropout:
+  note: Dropout possbility
+  value: 0
+act:
+  note: Activation function
+  value: ReLU
+beta:
+  note: beta value in GTCN block
+  value: False
+CV:
+  note: If use cross validation
+  value: False
+Gap_max:
+  note: The max clip value of gap
+  value: 45
+Gap_min:
+  note: The min clip value of gap
+  value: 0.3
+nw:
+  note: The nuber of worker to load data
+  value: 4
+
