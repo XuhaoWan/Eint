@@ -29,7 +29,7 @@ os.environ['CUDA_VISIBLE_DEVICES'] = gpu_ID
 
 lightning_lite.utilities.seed.seed_everything(seed=args.seed, workers=True)
 
-yaml_path = osp.join(os.getcwd(), 'test.yaml')
+yaml_path = osp.join(os.getcwd(), 'pt_v20250328.yaml')
 config = utils.load_yaml(yaml_path)
 
 model = GTCN(config)
