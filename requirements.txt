@@ -1,0 +1,19 @@
+# Eint/GTCN environment 
+# Target: CPython 3.10, 64-bit Linux (CPU or compatible NVIDIA CUDA installation).
+# Install PyTorch via README first for your platform (CPU or CUDA), then this file.
+torch==2.2.2
+torch-geometric==2.5.3
+pytorch-lightning==2.2.5
+torchmetrics==1.3.2
+numpy==1.26.4
+scipy==1.13.1
+pandas==2.2.2
+scikit-learn==1.5.2
+PyYAML==6.0.2
+networkx==3.3
+tqdm==4.66.5
+wandb==0.17.9
+rdkit==2024.3.5
+matplotlib==3.9.2
+h5py==3.11.0
+omegaconf==2.3.0
